@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import courses from '../../data/teaching.json';
+---
+<BaseLayout title="Teaching — Caleb Brunkhart">
+  <section>
+    <h1 class="text-3xl font-bold">Teaching</h1>
+    <p class="text-slate-400 mt-2">Courses taught or completed — sample entries you can replace.</p>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-4">
+      {courses.map((c) => (
+        <article class="card">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-sm text-slate-400">{c.term}</div>
+              <div class="text-lg font-semibold mt-1">{c.code} — {c.title}</div>
+              <div class="text-sm text-slate-400 mt-2">{c.description}</div>
+            </div>
+            <div class="ml-4">
+              <a href={c.link} class="text-sm underline">Syllabus</a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

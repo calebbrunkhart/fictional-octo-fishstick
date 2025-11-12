@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import profile from '../../data/profile.json';
+---
+<BaseLayout title="Research — Caleb Brunkhart">
+  <section>
+    <h1 class="text-3xl font-bold">Research</h1>
+    <p class="text-slate-400 mt-2">Focus areas and projects related to software engineering and requirements traceability.</p>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="card">
+        <h3 class="font-semibold">Active Projects</h3>
+        <ul class="mt-3 text-sm text-slate-400 space-y-2">
+          <li><strong>TraceAssist</strong> — Tooling to help automatically keep requirements trace links up-to-date in CI/CD.</li>
+          <li><strong>HybridVuln</strong> — Hybrid static-dynamic pipeline for early vulnerability detection in student codebases.</li>
+          <li><strong>OnboardPlay</strong> — Applying lightweight game design to developer onboarding and training.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="font-semibold">Approach</h3>
+        <p class="mt-2 text-sm text-slate-400">I combine empirical software engineering methods (trace studies, user studies) with automated tools (analysis, CI integrations) to improve software quality and developer workflows.</p>
+
+        <h4 class="mt-4 font-medium">Methods</h4>
+        <div class="mt-2 text-sm text-slate-400">
+          {profile.keywords.map((k) => <span class="inline-block mr-2 mb-2 px-2 py-1 rounded-full bg-slate-700/30">{k}</span>)}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

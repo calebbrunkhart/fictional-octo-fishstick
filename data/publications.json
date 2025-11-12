@@ -1,0 +1,42 @@
+[
+  {
+    "id": "pub1",
+    "title": "Trace-Assist: Tooling for Requirements Traceability in Agile Teams",
+    "authors": ["Caleb Brunkhart", "A. Researcher", "B. Advisor"],
+    "year": 2023,
+    "venue": "International Workshop on Traceability",
+    "url": "#",
+    "tags": ["Traceability", "Requirements Engineering"],
+    "notes": ""
+  },
+  {
+    "id": "pub2",
+    "title": "Detecting Vulnerabilities with Hybrid Static-Dynamic Analysis",
+    "authors": ["Caleb Brunkhart", "C. Colleague"],
+    "year": 2022,
+    "venue": "Journal of Software Testing",
+    "url": "#",
+    "tags": ["Vulnerability Detection", "Static Analysis"],
+    "notes": ""
+  },
+  {
+    "id": "pub3",
+    "title": "Best Paper — Automated Requirements Tracing in DevOps Pipelines",
+    "authors": ["Caleb Brunkhart", "D. Senior"],
+    "year": 2021,
+    "venue": "RE (Requirements Engineering) 2021 — Best Paper",
+    "url": "#",
+    "tags": ["Requirements Engineering"],
+    "notes": "Best Paper @ RE 2021"
+  },
+  {
+    "id": "pub4",
+    "title": "From Play to Process: Applying Game Design to Developer Onboarding",
+    "authors": ["Caleb Brunkhart"],
+    "year": 2024,
+    "venue": "Conference on Software Practice",
+    "url": "#",
+    "tags": ["Game Design", "Developer Experience"],
+    "notes": ""
+  }
+]

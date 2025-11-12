@@ -1,0 +1,35 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const { title = 'Caleb Brunkhart' } = Astro.props;
+---
+<!doctype html>
+<html lang="en" class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Caleb Brunkhart — Software Engineering & Requirements Researcher, University of Montana — Missoula, MT" />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="theme-color" content="#0f172a" />
+    <script>
+      // Immediately apply saved color mode
+      (function () {
+        try {
+          const mode = localStorage.getItem('theme');
+          if (mode === 'dark') document.documentElement.classList.add('dark');
+          else if (mode === 'light') document.documentElement.classList.remove('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body class="min-h-screen antialiased">
+    <Header />
+    <main class="site-container py-12">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

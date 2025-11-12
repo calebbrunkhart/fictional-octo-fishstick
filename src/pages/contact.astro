@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import profile from '../../data/profile.json';
+---
+<BaseLayout title="Contact — Caleb Brunkhart">
+  <section>
+    <h1 class="text-3xl font-bold">Contact</h1>
+    <p class="text-slate-400 mt-2">Feel free to reach out for collaboration, questions about research, or speaking requests.</p>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="card">
+        <h3 class="font-semibold">Get in touch</h3>
+        <p class="text-sm text-slate-400 mt-2">Email: <a href={`mailto:${profile.email}`} class="underline">{profile.email}</a></p>
+
+        <div class="mt-4">
+          <h4 class="font-medium">Message (example)</h4>
+          <p class="text-sm text-slate-400 mt-2">Replace this static page with a contact form if you later add a server or use a third-party form provider (Formspree, Netlify forms, etc.).</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="font-semibold">Office</h3>
+        <p class="text-sm text-slate-400 mt-2">University of Montana — Missoula, MT</p>
+        <div class="mt-4">
+          <h4 class="font-medium">Links</h4>
+          <ul class="text-sm text-slate-400 mt-2 space-y-1">
+            <li><a href="#" class="underline">CV (placeholder)</a></li>
+            <li><a href="#" class="underline">GitHub (placeholder)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

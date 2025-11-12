@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import profile from '../../data/profile.json';
+import publications from '../../data/publications.json';
+const recent = publications.slice(0, 3);
+---
+<BaseLayout title={`${profile.name} — Home`}>
+  <section class="grid md:grid-cols-3 gap-8 items-start">
+    <div class="md:col-span-2">
+      <div class="rounded-2xl p-8 card">
+        <div class="flex items-start gap-6">
+          <img src="/avatar-placeholder.svg" alt="avatar" class="w-24 h-24 rounded-lg" />
+          <div>
+            <h1 class="text-3xl font-bold">{profile.name}</h1>
+            <p class="text-slate-500 dark:text-slate-400 mt-1">{profile.title} • {profile.institution} • {profile.location}</p>
+            <p class="mt-4 text-slate-300 leading-relaxed">{profile.bio}</p>
+            <div class="mt-4">
+              <strong>Research keywords:</strong>
+              <div class="mt-2">
+                {profile.keywords.map((k) => <span class="inline-block mr-2 mb-2 px-3 py-1 rounded-full bg-slate-700/30 text-xs">{k}</span>)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="mt-8 grid md:grid-cols-3 gap-4">
+        {profile.quickLinks.map((q) => (
+          <a href={q.href} class="card block hover:shadow-md">
+            <div class="font-semibold">{q.label}</div>
+            <div class="text-sm text-slate-400 mt-2">Quick access</div>
+          </a>
+        ))}
+      </section>
+
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Recent Publications</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          {recent.map((p) => <PublicationCard pub={p} />)}
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <div class="card">
+        <h3 class="font-semibold">Contact</h3>
+        <p class="text-sm text-slate-400 mt-2">Email: <a href={`mailto:${profile.email}`} class="underline">{profile.email}</a></p>
+        <div class="mt-4">
+          <h4 class="font-medium">Location</h4>
+          <p class="text-sm text-slate-400">Missoula, Montana, USA</p>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <h3 class="font-semibold">Academic Timeline</h3>
+        <ol class="mt-2 text-sm text-slate-400 space-y-2">
+          <li><strong>2021</strong> — Started B.S. Computer Science at University of Montana</li>
+          <li><strong>2022</strong> — Undergraduate Research Assistant (Requirements Tracing)</li>
+          <li><strong>2023</strong> — First conference paper</li>
+          <li><strong>2024</strong> — Presented at Conference on Software Practice</li>
+        </ol>
+      </div>
+    </aside>
+  </section>
+</BaseLayout>

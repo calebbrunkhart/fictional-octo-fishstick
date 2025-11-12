@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import fs from 'fs';
+import path from 'path';
+
+const postsDir = new URL('../../pages/blog', import.meta.url);
+const posts = [
+  {
+    title: 'Sample post — Research notes',
+    href: '/blog/sample-post'
+  }
+];
+---
+<BaseLayout title="Blog — Caleb Brunkhart">
+  <section>
+    <h1 class="text-3xl font-bold">Blog</h1>
+    <p class="text-slate-400 mt-2">Notes, updates, and short posts about research and software engineering.</p>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-4">
+      {posts.map((p) => (
+        <article class="card">
+          <div>
+            <h3 class="font-semibold"><a href={p.href}>{p.title}</a></h3>
+            <div class="mt-2 text-sm text-slate-400">A short example blog post in MDX.</div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

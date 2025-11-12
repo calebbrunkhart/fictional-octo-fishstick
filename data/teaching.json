@@ -1,0 +1,30 @@
+[
+  {
+    "code": "CSCI 150",
+    "title": "Introduction to Computer Science",
+    "term": "Fall 2022",
+    "description": "Fundamentals of programming and computational thinking using Python. Emphasis on problem solving and basic algorithms.",
+    "link": "#"
+  },
+  {
+    "code": "CSCI 323",
+    "title": "Software Science",
+    "term": "Spring 2024",
+    "description": "Software engineering principles including version control, testing, and software design. Group project centered on CI/CD pipelines.",
+    "link": "#"
+  },
+  {
+    "code": "CSCI 410",
+    "title": "Requirements Engineering",
+    "term": "Fall 2024",
+    "description": "Elicitation, specification, and traceability of requirements; industry practices and tooling.",
+    "link": "#"
+  },
+  {
+    "code": "CSCI 437",
+    "title": "Automated Software Testing",
+    "term": "Spring 2025",
+    "description": "Unit, integration, and system testing approaches, test automation, and continuous testing practices.",
+    "link": "#"
+  }
+]

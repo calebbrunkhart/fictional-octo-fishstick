@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import pubs from '../../data/publications.json';
+---
+<BaseLayout title="Publications — Caleb Brunkhart">
+  <section>
+    <h1 class="text-3xl font-bold">Publications</h1>
+    <p class="text-slate-400 mt-2">Selected publications and conference papers (sample data).</p>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-4">
+      {pubs.map((p) => <PublicationCard pub={p} />)}
+    </div>
+  </section>
+</BaseLayout>

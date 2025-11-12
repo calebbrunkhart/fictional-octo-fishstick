@@ -1,0 +1,26 @@
+{
+  "name": "Caleb Brunkhart",
+  "title": "B.S. Computer Science (Software Engineering)",
+  "institution": "University of Montana",
+  "location": "Missoula, Montana, USA",
+  "email": "caleb@example.edu",
+  "bio": "I am a Computer Science major concentrating in Software Engineering at the University of Montana. My research interests include Requirements Engineering, traceability, automated detection of software vulnerabilities, and game design. I build tooling and experiments that bridge rigorous software engineering methods and practical developer workflows.",
+  "keywords": [
+    "Software Engineering",
+    "Requirements Engineering",
+    "Traceability",
+    "Automated Vulnerability Detection",
+    "Game Design",
+    "CI/CD",
+    "Testing",
+    "Software Quality"
+  ],
+  "quickLinks": [
+    { "label": "Research", "href": "/research" },
+    { "label": "Publications", "href": "/publications" },
+    { "label": "Teaching", "href": "/teaching" },
+    { "label": "Projects", "href": "/#projects" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}
