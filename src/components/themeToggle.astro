@@ -1,0 +1,28 @@
+---
+/* No imports needed */
+---
+<button
+  id="theme-toggle"
+  class="p-2 rounded-md border border-gray-600 dark:border-gray-300"
+  aria-label="Toggle theme"
+>
+  Toggle Theme
+</button>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  toggle?.addEventListener('click', () => {
+    const html = document.documentElement;
+    const current = html.classList.contains('dark') ? 'dark' : 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+
+    html.classList.toggle('dark');
+    localStorage.setItem('theme', next);
+  });
+
+  // Load saved theme on hydration
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    document.documentElement.classList.toggle('dark', saved === 'dark');
+  }
+</script>
