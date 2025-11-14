@@ -6,7 +6,6 @@ import PublicationCard from '../components/PublicationCard.astro';
 const recent = publications.slice(0, 3);
 ---
 <BaseLayout title={`${profile.name} — Home`}>
-  <section class="grid md:grid-cols-3 gap-8 items-start">
     <div class="md:col-span-2">
       <div class="rounded-2xl p-8 card">
         <div class="flex items-start gap-6">
@@ -62,5 +61,4 @@ const recent = publications.slice(0, 3);
         </ol>
       </div>
     </aside>
-  </section>
 </BaseLayout>
